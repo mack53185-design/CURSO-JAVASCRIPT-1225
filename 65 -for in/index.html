@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Perro(raza, edad, color){
+            this.patas = 4;
+            this.raza = raza;
+            this.edad = edad;
+            this.color = color;
+            this.ladrar = function(){
+                console.log("Guau!!!!")
+            };
+        }
+
+        let batu = new Perro("Cruza", 8, "negro");
+
+        for(let caracteristica in batu){
+            console.log(caracteristica+": "+batu[caracteristica]);
+        }
+
+        let perro1 = new Object({nombre: 'simba', edad: 5, color: "blanco"});
+
+        for(let prop in perro1){
+            console.log(`${prop}: ${perro1[prop]}`);
+        }
+        
+    </script>
+</body>
+</html>

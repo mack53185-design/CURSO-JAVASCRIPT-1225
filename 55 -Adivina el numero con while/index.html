@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivina el número</title>
+    <style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 20px;
+    }
+
+    #resultado {
+        background-color: #fff3e0;
+        padding: 15px;
+        margin-top: 10px;
+        border-radius: 8px;
+    }
+    </style>
+</head>
+<body>
+    <h2>🎲 ADIVINA EL NÚMERO</h2>
+    <p>Estoy pensando en un número del 1 al 10</p>
+    <button onclick="buscarNumero()">ADIVINAR</button>
+    <div id="resultado"></div>
+
+    <script>
+        let numero = Math.floor(Math.random() * 10) + 1;
+        console.log(numero);
+        let intento;
+
+        function buscarNumero() {
+            intento = Number(prompt("Ingresa un número"));
+            while (numero != intento) {
+                if (numero > intento) {
+                    alert("Muy Chico! Intenta con algo más grande");
+                } else if (numero < intento) {
+                    alert("Muy Grande! Intenta con algo más chico");
+                } else {
+                    alert("Adivinaste");
+                }
+            }
+        }
+    </script>
+</body>
+</html>
